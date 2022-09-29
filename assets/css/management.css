@@ -1,0 +1,459 @@
+@charset "UTF-8";
+/**
+ * フォント色
+ */
+/**
+ * 背景色
+ */
+/**
+ * 線色
+ */
+@font-face {
+  font-family: "CenturyGothic-Normal";
+  src: url(../fonts/CenturyGothic/CenturyGothic-Normal.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "CenturyGothic-Cursiva";
+  src: url(../fonts/CenturyGothic/CenturyGothic-Cursiva.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "CenturyGothic-Negreta";
+  src: url(../fonts/CenturyGothic/CenturyGothic-Negreta.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "CenturyGothic-Negretacursiva";
+  src: url(../fonts/CenturyGothic/CenturyGothic-Negretacursiva.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansJP-Black";
+  src: url(../fonts/NotoSansJP/NotoSansJP-Black.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansJP-Bold";
+  src: url(../fonts/NotoSansJP/NotoSansJP-Bold.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansJP-Light";
+  src: url(../fonts/NotoSansJP/NotoSansJP-Light.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansJP-Medium";
+  src: url(../fonts/NotoSansJP/NotoSansJP-Medium.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansJP-Regular";
+  src: url(../fonts/NotoSansJP/NotoSansJP-Regular.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansJP-Thin";
+  src: url(../fonts/NotoSansJP/NotoSansJP-Thin.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url(../fonts/Montserrat/Montserrat-SemiBold.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat-BlackItalic";
+  src: url(../fonts/Montserrat/Montserrat-BlackItalic.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat-Black";
+  src: url(../fonts/Montserrat/Montserrat-Black.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald-Bold";
+  src: url(../fonts/Oswald/Oswald-Bold.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald-ExtraLight";
+  src: url(../fonts/Oswald/Oswald-ExtraLight.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald-Light";
+  src: url(../fonts/Oswald/Oswald-Light.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald-Medium";
+  src: url(../fonts/Oswald/Oswald-Medium.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald-Regular";
+  src: url(../fonts/Oswald/Oswald-Regular.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald-SemiBold";
+  src: url(../fonts/Oswald/Oswald-SemiBold.woff2) format("woff2");
+  font-display: swap;
+}
+.b-mainTitle .cell:first-child > div {
+  left: 0;
+  transform: translateY(-50%) translateX(-10%);
+  -webkit-transform: translateY(-50%) translateX(10%);
+}
+@media (max-width: 767px) {
+  .b-mainTitle .cell:first-child > div {
+    left: auto;
+    transform: unset;
+    padding: 50px 30px;
+  }
+}
+.b-mainTitle .cell:first-child > div h2 {
+  font-size: 2.5333333333vw;
+}
+@media (max-width: 767px) {
+  .b-mainTitle .cell:first-child > div h2 {
+    font-size: 4.5632333768vw;
+  }
+}
+@media (max-width: 767px) {
+  .b-mainTitle .cell:first-child > div span {
+    font-size: 3.9113428944vw;
+  }
+}
+
+.under-page__contents .cts {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto 60px;
+  padding: 0;
+}
+@media (max-width: 767px) {
+  .under-page__contents .cts {
+    max-width: 90%;
+  }
+}
+
+/**
+ * [サブタイトル] レイアウト
+ */
+.sub-title {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .sub-title {
+    font-size: 4.9543676662vw;
+    padding: 0 0 5px;
+    text-align: left;
+  }
+}
+.sub-title h3 {
+  display: inline-block;
+  font-size: 1.8666666667vw;
+  border-bottom: 1px solid #E8E8E8;
+  padding: 0 50px 5px;
+}
+@media (max-width: 767px) {
+  .sub-title h3 {
+    display: flex;
+    align-items: end;
+    width: 100%;
+    font-size: 5.8670143416vw;
+    padding: 0 0 5px 20px;
+  }
+}
+.sub-title h3 img {
+  margin-left: 20px;
+  position: relative;
+}
+
+#sec01 {
+  margin-bottom: 80px;
+}
+@media (max-width: 767px) {
+  #sec01 .sub-title {
+    max-width: 90%;
+    width: 100%;
+    margin: auto;
+  }
+}
+#sec01 .sub-title img {
+  width: 80px;
+  top: -5px;
+}
+
+#sec02 {
+  margin-bottom: 100px;
+}
+@media (max-width: 767px) {
+  #sec02 {
+    margin-bottom: 50px;
+  }
+}
+#sec02 .sub-title img {
+  width: 140px;
+  top: -5px;
+}
+#sec02 .red-txt {
+  color: #FF4E54;
+  font-size: 1.4666666667vw;
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  margin: 60px 0;
+}
+@media (max-width: 767px) {
+  #sec02 .red-txt {
+    font-size: 3.9113428944vw;
+    margin: 20px 0;
+  }
+}
+#sec02 > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 100px;
+}
+@media (max-width: 767px) {
+  #sec02 > ul {
+    padding: 0 10px;
+    margin-top: 40px;
+  }
+}
+#sec02 > ul li {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 38%;
+}
+@media (max-width: 767px) {
+  #sec02 > ul li {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+#sec02 > ul li img {
+  width: 70px;
+  margin: 0 auto 10px;
+}
+#sec02 > ul li p {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+}
+@media (max-width: 767px) {
+  #sec02 > ul li p {
+    font-size: 3.6505867014vw;
+  }
+}
+#sec02 .b-txt {
+  margin-top: 50px;
+  line-height: 2vw;
+}
+@media (max-width: 767px) {
+  #sec02 .b-txt {
+    margin-top: 20px;
+    line-height: 8vw;
+  }
+}
+
+.management-msg {
+  background: url("../img/management_philosophy/back_msg.png") no-repeat center;
+  background-size: cover;
+  padding: 100px 0;
+  margin: 80px 0;
+}
+@media (max-width: 1050px) {
+  .management-msg {
+    padding: 50px 20px;
+    margin: 50px 0;
+  }
+}
+@media (max-width: 767px) {
+  .management-msg {
+    padding: 20px 17px;
+    margin: 40px 0;
+  }
+}
+.management-msg ul {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+@media (max-width: 1050px) {
+  .management-msg ul {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 767px) {
+  .management-msg ul {
+    padding: 0;
+  }
+}
+.management-msg ul li {
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  margin-bottom: 20px;
+  font-size: 1.7333333333vw;
+}
+@media (max-width: 767px) {
+  .management-msg ul li {
+    font-size: 3.9113428944vw;
+    margin-bottom: 10px;
+    padding-left: 2.2em;
+    text-indent: -2.2em;
+  }
+}
+.management-msg ul li:last-child {
+  margin-bottom: 0;
+}
+
+.msg-box {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+}
+@media (max-width: 1050px) {
+  .msg-box {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+.msg-box p {
+  line-height: 2.5vw;
+}
+@media (max-width: 1050px) {
+  .msg-box p {
+    line-height: 3vw;
+  }
+}
+@media (max-width: 767px) {
+  .msg-box p {
+    line-height: 8vw;
+  }
+}
+.msg-box ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px;
+}
+@media (max-width: 767px) {
+  .msg-box ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  .msg-box ul li {
+    width: 30%;
+    margin-right: 4%;
+    text-align: center;
+  }
+  .msg-box ul li:nth-child(1) img {
+    width: 75%;
+  }
+  .msg-box ul li:nth-child(3) {
+    margin-right: 0;
+  }
+}
+
+.more__btn {
+  display: block;
+  margin: 20px auto;
+  padding: 20px 30px;
+  border: 1px solid #000;
+  cursor: pointer;
+  width: 200px;
+  outline: 0;
+  transition: 0.5s;
+  background-color: #FFF;
+}
+@media (max-width: 767px) {
+  .more__btn {
+    margin: 0 auto;
+  }
+}
+.more__btn::after {
+  content: "Read More →";
+  transition: 0.2s;
+}
+.more__btn.on-click:after {
+  content: "閉じる";
+}
+
+@media (max-width: 767px) {
+  .txt-hide {
+    display: none;
+  }
+}
+
+.staff-box {
+  margin: 70px 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 45px 0 75px;
+}
+@media (max-width: 767px) {
+  .staff-box {
+    margin: 20px 0 25px;
+    padding: 0 10px 0 30px;
+    display: block;
+  }
+}
+.staff-box .cell:first-child {
+  width: 42%;
+}
+@media (max-width: 767px) {
+  .staff-box .cell:first-child {
+    width: 80%;
+    margin: auto;
+  }
+}
+.staff-box .cell:last-child {
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .staff-box .cell:last-child {
+    width: 100%;
+  }
+}
+.staff-box .cell:last-child h4 {
+  font-size: 1.7333333333vw;
+  display: flex;
+  align-items: end;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  .staff-box .cell:last-child h4 {
+    font-size: 5.2151238592vw;
+    margin: 25px 0 15px;
+  }
+}
+.staff-box .cell:last-child h4 img {
+  width: 6vw;
+}
+@media (max-width: 767px) {
+  .staff-box .cell:last-child h4 img {
+    width: 18vw;
+  }
+}
+.staff-box .cell:last-child p {
+  line-height: 2vw;
+}
+@media (max-width: 767px) {
+  .staff-box .cell:last-child p {
+    line-height: 8vw;
+  }
+}
+
+/*# sourceMappingURL=management.css.map */

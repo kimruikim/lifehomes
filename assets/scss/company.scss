@@ -1,0 +1,49 @@
+@use "setting/variable" as *;
+@use "setting/mixin" as *;
+@use "setting/fonts" as *;
+@use "setting/function" as *;
+@use "sass:map";
+
+
+.b-mainTitle .cell:first-child > div {
+  left: 0;
+  transform: translateY(-50%) translateX(-10%);
+  -webkit-transform: translateY(-50%) translateX(10%);
+  @include mq(max, tb) {
+    left: auto;
+    transform: unset;
+  }
+  h2 {
+    font-size: vw(33, 1500);
+    @include mq(max, tb) {
+      font-size: vw(30, tb);
+    }
+  }
+  span {
+    @include mq(max, tb) {
+      font-size: vw(25, tb);
+    }
+  }
+}
+
+.under-page__contents {
+  .cts {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0;
+    @include mq(max, 1000) {
+      max-width: 90%;
+    }
+  }
+}
+
+.coming-txt {
+  text-align: center;
+  p {
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-size: vw(40, 1500);
+    @include mq(max, tb) {
+      font-size: vw(40, tb);
+    }
+  }
+}

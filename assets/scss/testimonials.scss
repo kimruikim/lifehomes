@@ -1,0 +1,99 @@
+@use "setting/variable" as *;
+@use "setting/mixin" as *;
+@use "setting/fonts" as *;
+@use "setting/function" as *;
+@use "sass:map";
+
+/**
+ * [受講生一覧リスト] レイアウト
+ */
+.student-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  @include mq(max, 1365) { padding: 0 30px; }
+  @include mq(max, tb) {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 40px;
+    padding: 0;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 20px;
+    background: rgba(253, 223, 228, .57);
+    width: 100%;
+    max-width: calc((100% - 45px) / 2);
+    margin-bottom: 50px;
+    border-radius: 10px;
+    @include mq(max, tb) {
+      max-width: 90%;
+      display: block;
+      margin: 0 auto 30px;
+      padding: 30px 45px;
+    }
+    @include mq(max, tb) {
+      padding: 20px 30px;
+    }
+    .cell {
+      &:first-child {
+        width: 46%;
+        @include mq(max, tb) {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        >p {
+          font-size: vw(22, 1500);
+          color: $color_pink_dark_2;
+          margin-top: 20px;
+          text-align: center;
+          @include mq(max, tb) {
+            font-size: vw(40, tb);
+            margin-top: 15px;
+          }
+        }
+        img { width: 100%; }
+      }
+      &:last-child {
+        width: 50%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        @include mq(max, tb) {
+          width: 100%;
+          padding: 0 10px;
+        }
+        strong {
+          display: block;
+          color: $color_pink_dark_2;
+          font-size: vw(18, 1500);
+          margin-bottom: 10px;
+          @include mq(max, tb) {
+            font-size: vw(34, tb);
+            margin-bottom: 10px;
+          }
+        }
+        p {
+          color: $font_color_black_thin;
+        }
+      }
+    }
+  }
+}
+
+.note-txt {
+  max-width: 1000px;
+  width: 100%;
+  margin: auto;
+  text-align: right;
+  color: $font_color_black_thin;
+  @include mq(max, tb) {
+    text-align: left;
+    max-width: 90%;
+  }
+}

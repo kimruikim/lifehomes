@@ -1,0 +1,155 @@
+@charset "UTF-8";
+/**
+ * フォント色
+ */
+/**
+ * 背景色
+ */
+/**
+ * 線色
+ */
+@font-face {
+  font-family: "CenturyGothic-Normal";
+  src: url(../fonts/CenturyGothic/CenturyGothic-Normal.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "CenturyGothic-Cursiva";
+  src: url(../fonts/CenturyGothic/CenturyGothic-Cursiva.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "CenturyGothic-Negreta";
+  src: url(../fonts/CenturyGothic/CenturyGothic-Negreta.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "CenturyGothic-Negretacursiva";
+  src: url(../fonts/CenturyGothic/CenturyGothic-Negretacursiva.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansJP-Black";
+  src: url(../fonts/NotoSansJP/NotoSansJP-Black.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansJP-Bold";
+  src: url(../fonts/NotoSansJP/NotoSansJP-Bold.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansJP-Light";
+  src: url(../fonts/NotoSansJP/NotoSansJP-Light.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansJP-Medium";
+  src: url(../fonts/NotoSansJP/NotoSansJP-Medium.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansJP-Regular";
+  src: url(../fonts/NotoSansJP/NotoSansJP-Regular.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "NotoSansJP-Thin";
+  src: url(../fonts/NotoSansJP/NotoSansJP-Thin.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url(../fonts/Montserrat/Montserrat-SemiBold.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat-BlackItalic";
+  src: url(../fonts/Montserrat/Montserrat-BlackItalic.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat-Black";
+  src: url(../fonts/Montserrat/Montserrat-Black.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald-Bold";
+  src: url(../fonts/Oswald/Oswald-Bold.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald-ExtraLight";
+  src: url(../fonts/Oswald/Oswald-ExtraLight.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald-Light";
+  src: url(../fonts/Oswald/Oswald-Light.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald-Medium";
+  src: url(../fonts/Oswald/Oswald-Medium.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald-Regular";
+  src: url(../fonts/Oswald/Oswald-Regular.woff2) format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald-SemiBold";
+  src: url(../fonts/Oswald/Oswald-SemiBold.woff2) format("woff2");
+  font-display: swap;
+}
+.b-mainTitle .cell:first-child > div {
+  left: 0;
+  transform: translateY(-50%) translateX(-10%);
+  -webkit-transform: translateY(-50%) translateX(10%);
+}
+@media (max-width: 767px) {
+  .b-mainTitle .cell:first-child > div {
+    left: auto;
+    transform: unset;
+  }
+}
+.b-mainTitle .cell:first-child > div h2 {
+  font-size: 2.2vw;
+}
+@media (max-width: 767px) {
+  .b-mainTitle .cell:first-child > div h2 {
+    font-size: 3.9113428944vw;
+  }
+}
+@media (max-width: 767px) {
+  .b-mainTitle .cell:first-child > div span {
+    font-size: 3.259452412vw;
+  }
+}
+
+.under-page__contents .cts {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0;
+}
+@media (max-width: 1000px) {
+  .under-page__contents .cts {
+    max-width: 90%;
+  }
+}
+
+.coming-txt {
+  text-align: center;
+}
+.coming-txt p {
+  font-family: fot-tsukuardgothic-std, sans-serif;
+  font-size: 2.6666666667vw;
+}
+@media (max-width: 767px) {
+  .coming-txt p {
+    font-size: 5.2151238592vw;
+  }
+}
+
+/*# sourceMappingURL=company.css.map */

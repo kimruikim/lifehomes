@@ -1,0 +1,151 @@
+@use "../setting/variable" as *;
+@use "../setting/mixin" as *;
+@use "../setting/function" as *;
+@use "sass:map";
+
+
+/**
+ * [ヘッダー] レイアウト
+ */
+.l-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  padding: 22px 20px;
+  z-index: 99;
+  background: rgba(255, 221, 209, .25);
+  @include mq(max, tb) {
+    padding: 10px;
+  }
+  &.ac {
+    background: rgba(255, 221, 209, .5);
+    top: 0;
+    .global-navi {
+      //@include mq(max, tb) {
+      //  top: 0;
+      //}
+    }
+  }
+}
+.l-logo {
+  width: 16vw;
+  @include mq(max, 1300) { width: 23vw; }
+  @include mq(max, 1000) { width: 19vw; }
+  @include mq(max, tb) { width: 60vw; }
+}
+
+/**
+ * [グローバルメニュー] レイアウト
+ */
+.global-navi {
+  display: flex;
+  align-items: center;
+  @include mq(max, tb) {
+    display: block;
+    position: absolute;
+    overflow-y: scroll;
+    right: 0;
+    top: -40px;
+    width: 80%;
+    height: calc(100vh + 40px);
+    transform: translateX(100%);
+    background-color: rgba(255, 255, 255, .85);
+    transition: ease .4s;
+    padding: 100px 15px 0;
+  }
+  &__item {
+    padding: 0 10px;
+    @include mq(max, 900) {
+      padding: 0 5px;
+    }
+    @include mq(max, tb) {
+      width: 100%;
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+        background-color: $back_color_white;
+        padding: 10px;
+        img {
+          width: 40px;
+        }
+      }
+    }
+    a {
+      display: block;
+      font-family: fot-tsukuardgothic-std, sans-serif;
+      font-size: vw(16, 1500);
+      color: $font_color_black;
+      &:hover { color: $color_pink_dark; }
+      @include mq(max, tb) {
+        font-size: vw(40, tb);
+        text-align: center;
+      }
+    }
+    &.ac a {
+      color: $color_pink;
+      &:hover { opacity: 1; }
+    }
+  }
+  &.ac {
+    transform: translateX(0);
+  }
+  .insta-img {
+    width: 50px;
+    @include mq(max, 900) {
+      width: 30px;
+    }
+  }
+}
+
+/**
+ * [ハンバーガー] レイアウト
+ */
+.l-header__hamburger {
+  width: 48px;
+  height: 48px;
+}
+.hamburger {
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 9999;
+  span {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    position: relative;
+    transition: ease .4s;
+    display: block;
+    &:nth-child(1) { top: 0; }
+    &:nth-child(2) { margin: 8px 0; }
+    &:nth-child(3) { top: 0; }
+  }
+  &.ac {
+    span {
+      &:nth-child(1) {
+        top: 5px;
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) { opacity: 0; }
+      &:nth-child(3) {
+        top: -13px;
+        transform: rotate(-45deg);
+      }
+    }
+
+  }
+}
+
+
+
+/**
+ * [流れるお知らせ] レイアウト
+ */
+.flow-news {
+  font-size : 14px;
+  text-align : center;
+  padding: 5px 0;
+  background-color: $flow_back_color;
+}

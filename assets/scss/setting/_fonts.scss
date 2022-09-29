@@ -1,0 +1,18 @@
+@use "sass:map";
+
+$webfont: (
+	CenturyGothic: (Normal, Cursiva, Negreta, Negretacursiva),
+	NotoSansJP: (Black, Bold, Light, Medium, Regular, Thin),
+	Montserrat: (SemiBold, BlackItalic, Black),
+	Oswald: (Bold, ExtraLight, Light, Medium, Regular, SemiBold)
+);
+
+@each $font_name, $font_types in $webfont {
+	@each $font_type in $font_types {
+		@font-face {
+			font-family: '#{$font_name}-#{$font_type}';
+			src: url(../fonts/#{$font_name}/#{$font_name}-#{$font_type}.woff2) format('woff2');
+			font-display: swap;
+		}
+	}
+}

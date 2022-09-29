@@ -1,0 +1,253 @@
+@use "../setting/variable" as *;
+@use "../setting/mixin" as *;
+@use "../setting/function" as *;
+@use "sass:map";
+
+footer {
+  position: relative;
+  z-index: 0;
+  .side-item {
+    position: absolute;
+    z-index: 0;
+    img {
+      width: 80px;
+      @include mq(max, 1000) { width: 60px; }
+    }
+    &__type100 {
+      top: -50px;
+      left: 0;
+      @include mq(max, tb) {
+        width: 60px;
+        top: -40px;
+      }
+    }
+  }
+}
+
+/**
+ * [バナー] レイアウト
+ */
+.bnr-box {
+  background: url("../img/common/back_img.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  padding: 30px 77px;
+  @include mq(max, tb) {
+    padding: 20px;
+  }
+}
+.foot-bnr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $mainWidth;
+  width: 100%;
+  margin: auto;
+  @include mq(max, tb) {
+    display: block;
+  }
+  &__item {
+    width: 48%;
+    position: relative;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 10px;
+    text-align: center;
+    @include mq(max, tb) {
+      width: 100%;
+      margin-bottom: 20px;
+      &:last-child { margin-bottom: 0; }
+    }
+    a {
+      display: block;
+      height: 200px;
+      width: 100%;
+      color: $font_color_black;
+      position: relative;
+      @include mq(max, 1200) { height: 150px; }
+      @include mq(max, tb) { height: 120px; }
+      >div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+      }
+      p, h2 { font-family: fot-tsukuardgothic-std, sans-serif; }
+      p {
+        font-size: vw(15, 1500);
+        @include mq(max, tb) { font-size: vw(30, tb); }
+      }
+      h2 {
+        font-size: vw(25, 1500);
+        @include mq(max, tb) { font-size: vw(50, tb); }
+      }
+    }
+    &:first-child a >div {
+      .side-item {
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        z-index: -1;
+        img {
+          width: 100px;
+          @include mq(max, tb) { width: 80px; }
+        }
+      }
+    }
+    &:last-child a >div {
+      .side-item {
+        top: 60%;
+        transform: translateY(-50%) translateX(-50%);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        z-index: -1;
+        img { width: 50px; }
+      }
+    }
+  }
+}
+
+/**
+ * [メニュー] レイアウト
+ */
+.footer-menu {
+  background-color: $back_color_gray;
+  padding: 85px 0 40px;
+  position: relative;
+  @include mq(max, tb) { padding: 50px 0 30px; }
+    .b-logo {
+    text-align: center;
+  }
+}
+.footMenu-box {
+  max-width: 75%;
+  width: 100%;
+  margin: 0 auto 80px;
+  display: flex;
+  @include mq(max, tb) {
+    display: block;
+    max-width: 100%;
+    padding: 0 40px;
+  }
+}
+.footMenu-list {
+  margin-right: 20%;
+  @include mq(max, tb) { margin-right: 0 }
+  &__item {
+    margin-bottom: 15px;
+    @include mq(max, 1200) { margin-bottom: 5px; }
+    @include mq(max, tb) { margin-bottom: 5px; }
+    a {
+      color: $font_color_white;
+      font-size: vw(16, 1500);
+      font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+      @include mq(max, tb) { font-size: vw(30, tb); }
+    }
+  }
+}
+
+
+/* ==========================
+  フローティングバナー（追従バナー）
+========================== */
+.b-floatingBnr {
+  position: fixed;
+  bottom: 10%;
+  right: 10px;
+  width: 100%;
+  max-width: 215px;
+  height: 224px;
+  background: url("../img/common/back_bnr.png") no-repeat center;
+  background-size: auto;
+  border-radius: 10px;
+  z-index: 1;
+  @include mq(max, tb) { display: none; }
+  &__contents {
+    display: block;
+    padding: 10px;
+    img { width: 100%; }
+    p {
+      font-size: 13px;
+      color: $font_color_white;
+      padding: 10px 0 0;
+      text-align: center;
+      font-family: fot-tsukuardgothic-std, sans-serif;
+    }
+    span {
+      font-size: 24px;
+      color: $font_color_red;
+    }
+  }
+  &__close {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    span {
+      &:first-child {
+        position: absolute;
+        top: 7px;
+        right: 0;
+        width: 15px;
+        height: 1px;
+        background-color: $back_color_black;
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        position: absolute;
+        top: 0;
+        right: 7px;
+        width: 1px;
+        height: 15px;
+        background-color: $back_color_black;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  &__sp {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    background: url("../img/common/back_bnr_sp.png") no-repeat center;
+    max-width: 366px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    a {
+      display: block;
+      color: $font_color_white;
+      padding: 10px 0 20px;
+      font-size: 21px;
+      span {
+        display: inline-block;
+        font-size: 32px;
+        color: $font_color_red;
+      }
+    }
+    .b-floatingBnr__close {
+      background-color: $color_pink_dark;
+      border-radius: 50%;
+      padding: 20px;
+      right: 10px;
+      top: -12px;
+      span {
+        background-color: $back_color_white;
+        &:first-child {
+          position: absolute;
+          top: 20px;
+          right: 5px;
+          width: 30px;
+        }
+        &:last-child {
+          position: absolute;
+          top: 5px;
+          right: 20px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

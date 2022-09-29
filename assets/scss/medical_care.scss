@@ -1,0 +1,365 @@
+@use "setting/variable" as *;
+@use "setting/mixin" as *;
+@use "setting/fonts" as *;
+@use "setting/function" as *;
+@use "sass:map";
+
+.b-mainTitle .cell:first-child > div {
+  left: 0;
+  transform: translateY(-50%) translateX(-10%);
+  -webkit-transform: translateY(-50%) translateX(10%);
+  @include mq(max, tb) {
+    left: auto;
+    transform: unset;
+    padding: 50px 30px;
+  }
+  h2 {
+    font-size: vw(40, 1500);
+    @include mq(max, tb) {
+      font-size: vw(35, tb);
+    }
+  }
+  span {
+    @include mq(max, tb) {
+      font-size: vw(30, tb);
+    }
+  }
+}
+
+.under-page__contents {
+  .cts {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto 60px;
+    @include mq(max, tb) {
+      max-width: 90%;
+    }
+  }
+}
+/**
+ * [サブタイトル] レイアウト
+ */
+.sub-title {
+  display: inline-block;
+  text-align: center;
+  font-size: vw(28, 1500);
+  border-bottom: 1px solid $border_color_black_thin;
+  padding: 0 20px 5px;
+  @include mq(max, tb) {
+    font-size: vw(38, tb);
+    padding: 0 0 5px;
+    text-align: left;
+  }
+}
+
+/**
+ * [total healthボックス] レイアウト
+ */
+.totalHealth-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  @include mq(max, tb) {
+    display: block;
+  }
+  .cell {
+    width: 50%;
+    @include mq(max, tb) { width: 100%; }
+    &:first-child {
+      @include mq(max, tb) { margin-bottom: 40px; }
+      p {
+        margin: 20px 0;
+        line-height: 2.5vw;
+        @include mq(max, tb) {
+          padding: 0;
+          line-height: normal;
+        }
+      }
+      a {
+        display: inline-block;
+        border: 1px solid $border_color_black;
+        padding: 10px 15px;
+        color: $font_color_black;
+        @include mq(max, tb) {
+          font-size: vw(30, tb);
+        }
+      }
+    }
+  }
+  .sub-title {
+    text-align: center;
+    display: block;
+    @include mq(max, tb) {
+      text-align: left;
+    }
+  }
+}
+
+
+/**
+ * [予防ケアコーチ] レイアウト
+ */
+.coach-box {
+  margin: 30px 0 -40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include mq(max, tb) {
+    display: block;
+    margin: 30px 0 0;
+  }
+  &__item {
+    width: 49%;
+    position: relative;
+    margin-bottom: 50px;
+    overflow: hidden;
+    @include mq(max, tb) {
+      width: 100%;
+      margin-bottom: 0;
+    }
+    p {
+      border: 1px solid #F6BCBE;
+      padding: 20px 15px;
+      line-height: 2.5vw;
+      position: relative;
+      @include mq(max, tb) {
+        line-height: 6.5vw;
+      }
+    }
+    >img {
+      position: relative;
+      z-index: 0;
+    }
+    &:nth-child(1) {
+      order: 1;
+      p {
+        z-index: 1;
+        @include mq(max, tb) {
+          order: 1;
+          width: 85%;
+        }
+      }
+      >img {
+        top: -60px;
+        float: right;
+        width: 150px;
+        @include mq(max, tb) {
+          top: -40px;
+          right: -10px;
+        }
+      }
+    }
+    &:nth-child(2) {
+      width: 35%;
+      top: -60px;
+      order: 3;
+      @include mq(max, tb) {
+        width: 100%;
+        top: 0;
+        p {
+          float: right;
+          width: 85%;
+        }
+      }
+      >img {
+        top: -50px;
+        right: -100px;
+        float: right;
+        width: 250px;
+        @include mq(max, tb) {
+          float: left;
+          right: 0;
+          top: -15px;
+        }
+      }
+    }
+    &:nth-child(3) {
+      top: 70px;
+      clear: both;
+      order: 2;
+      @include mq(max, tb) {
+        top: 20px;
+        margin-bottom: 40px;
+        p {
+          width: 85%;
+        }
+      }
+      >img {
+        top: -20px;
+        float: right;
+        width: 300px;
+        @include mq(max, tb) {
+          width: 85%;
+          top: -10px;
+        }
+      }
+    }
+    &:nth-child(4) {
+      order: 4;
+      clear: both;
+      @include mq(max, tb) {
+        p {
+          width: 90%;
+          float: right;
+        }
+      }
+      >img {
+        top: -50px;
+        float: right;
+        width: 200px;
+        @include mq(max, tb) {
+          float: left;
+          top: -15px;
+        }
+      }
+    }
+  }
+}
+p.catch-msg {
+  text-align: right;
+  font-size: vw(25, 1500);
+}
+
+#sec03 {
+  text-align: center;
+  @include mq(max, tb) { text-align: left; }
+  .note-txt {
+    text-align: left;
+    margin: 30px 0;
+  }
+}
+.tab-list {
+  display: flex;
+  text-align: left;
+  &__item {
+    padding: 15px 30px;
+    border-radius: 20px 20px 0 0;
+    font-size: vw(24, 1500);
+    cursor: pointer;
+    @include mq(max, tb) { font-size: vw(30, tb); }
+    &:hover { opacity: .75; }
+    &.ac {
+      &:hover { opacity: 1; }
+    }
+    &:nth-child(1) {
+      background-color: $color_pink_thin_2;
+    }
+    &:nth-child(2) {
+      background-color: #F6BCBE;
+    }
+    &:nth-child(3) {
+      background-color: #DF969A;
+    }
+  }
+}
+.tab-contents {
+  margin-bottom: 80px;
+  @include mq(max, tb) { margin-bottom: 40px; }
+  li {
+    padding: 50px;
+    display: none;
+    @include mq(max, tb) {
+      padding: 20px 10px;
+    }
+    >div {
+      padding: 30px;
+      background-color: $back_color_white;
+      border-radius: 40px;
+      @include mq(max, tb) {
+        padding: 10px;
+      }
+    }
+    &.ac { display: block; }
+    &:nth-child(1) {
+      background-color: $color_pink_thin_2;
+    }
+    &:nth-child(2) {
+      background-color: #F6BCBE;
+    }
+    &:nth-child(3) {
+      background-color: #DF969A;
+    }
+  }
+}
+
+
+#sec04 {
+  text-align: center;
+  @include mq(max, tb) { text-align: left; }
+}
+.merit-list {
+  text-align: left;
+  margin: 40px 0 80px;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    background-color: $back_color_white;
+    box-shadow: 0 0.625rem 0.625rem 0 rgb(0 0 0 / 10%);
+    padding: 20px;
+    @include mq(max, tb) {
+      display: block;
+      padding: 20px 10px;
+    }
+
+    .cell {
+      &:first-child {
+        width: 65%;
+        padding: 0 20px 0 0;
+        @include mq(max, tb) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+      &:last-child {
+        width: 35%;
+        @include mq(max, tb) {
+          width: 100%;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &:nth-child(2) {
+      flex-direction: row-reverse;
+      .cell {
+        &:first-child {
+          padding: 0 0 0 20px;
+        }
+      }
+    }
+    h4 {
+      display: flex;
+      align-items: center;
+      font-size: vw(28, 1500);
+      color: $color_pink_dark_2;
+      font-weight: bold;
+      margin-bottom: 20px;
+      @include mq(max, tb) {
+        font-size: vw(35, tb);
+      }
+      span {
+        display: inline-block;
+        border-bottom: 2px solid $color_pink_dark_2;
+        font-size: vw(22, 1500);
+        padding-bottom: 2px;
+        margin: 0 25px 0 0;
+        @include mq(max, tb) {
+          font-size: vw(40, tb);
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+    p {
+      line-height: 1.5vw;
+      @include mq(max, tb) {
+        line-height: 6.5vw;
+      }
+      strong {
+        color: $color_pink_dark_2;
+      }
+    }
+  }
+}
