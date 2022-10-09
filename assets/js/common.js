@@ -1,6 +1,4 @@
 $(function(){
-    headerAutoHeight();
-
     const CLASSNAME = "-visible";
     const TIMEOUT = 1000;
     const $target = $(".b-mainTitle .cell");
@@ -8,23 +6,6 @@ $(function(){
     setTimeout(() => {
         $target.addClass(CLASSNAME);
     }, TIMEOUT);
-
-    $(window).on('load', function() {
-        var windowwidth_1 = window.innerWidth || document.documentElement.clientWidth || 0;
-        // headerの高さ分、下層のpageに付ける対応
-        if (windowwidth_1 > 768){
-            // タイトルの高さ処理
-            mainImgAutoHeight();
-        }
-    });
-    $(window).on("resize", function (){
-        var windowwidth_2 = window.innerWidth || document.documentElement.clientWidth || 0;
-        headerAutoHeight();
-        if (windowwidth_2 > 768){
-            // タイトルの高さ処理
-            mainImgAutoHeight();
-        }
-    });
 
     // ×を押すと閉じる
     $("#js_floatingBnr_close").on("click", function() {
@@ -40,22 +21,14 @@ $(function(){
         const scrollPosition = $(window).height() + $(window).scrollTop();
         const footerHeight = $("footer").innerHeight();
 
-        if (bodyHeight - scrollPosition <= footerHeight) {
-            $("#js_floatingBnr").css({
-                position: "absolute",
-                top: "-230px",
-            });
-        } else {
-            $("#js_floatingBnr").css({
-                position: "fixed",
-                top: "50%",
-            });
-        }
-
         if($(window).scrollTop() > 20) {
             $('.l-header').addClass('ac');
+            let src = $('.l-header').find('.pc').attr('src').replace('logo.png', 'logo_s.png');
+            $('.l-header').find('.pc').attr('src', src);
         } else {
             $('.l-header').removeClass('ac');
+            let src = $('.l-header').find('.pc').attr('src').replace('logo_s.png', 'logo.png');
+            $('.l-header').find('.pc').attr('src', src);
         }
 
     });
@@ -69,14 +42,3 @@ $(function(){
     });
 });
 
-
-function headerAutoHeight() {
-    const headerHeight = $(".l-header").innerHeight();
-    $('.under-page').css('padding-top', headerHeight+'px');
-}
-function mainImgAutoHeight() {
-    const titleImgHeight = $("#mainImg").innerHeight() + 50;
-    const titleBackHeight = $("#mainImg").innerHeight() - 10;
-    $('.b-mainTitle').css('height', titleImgHeight+'px');
-    $('#mainTitleBack').css('height', titleBackHeight+'px');
-}

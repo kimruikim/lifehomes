@@ -4,9 +4,9 @@
   "description": "",
   "scripts": {
     "server": "php -S localhost:8000",
-    "sass": "sass sub/assets/scss:sub/assets/css --style expanded --watch",
+    "sass": "sass assets/scss:assets/css --style expanded --watch",
     "dev": "run-p server sass",
-    "pro": "sass sub/assets/scss/:sub/assets/css/ --style compressed"
+    "pro": "sass assets/scss/:assets/css/ --style compressed"
   },
   "dependencies": {
     "jquery": "^3.6.0",

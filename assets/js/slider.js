@@ -1,42 +1,26 @@
 $(function() {
-//     //画像の設定
-//     var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
-//     if (windowwidth > 768){
-//         var responsiveImage = [//PC用の画像
-//             { src: '/sub/assets/img/top/slide/slide_1.png'},
-//             { src: '/sub/assets/img/top/slide/slide_2.png'},
-//             { src: '/sub/assets/img/top/slide/slide_3.png'},
-//             { src: '/sub/assets/img/top/slide/slide_4.png'}
-//         ];
-//     } else {
-//         var responsiveImage = [//タブレットサイズ（768px）以下用の画像
-//             { src: '/sub/assets/img/top/slide/slide_sp_1.png'},
-//             { src: '/sub/assets/img/top/slide/slide_sp_2.png'},
-//             { src: '/sub/assets/img/top/slide/slide_sp_3.png'},
-//             { src: '/sub/assets/img/top/slide/slide_sp_4.png'}
-//         ];
-//     }
-//
-// //Vegas全体の設定
-//
-//     $('#main-slider').vegas({
-//         // delay: 7000,
-//         // transition: 'fade',
-//         // firstTransition: 'fade',
-//         // firstTransitionDuration: 5000,
-//         // transitionDuration: 2000,
-//         overlay: false, // 画像の上に網線やドットのオーバーレイパターン画像を指定。
-//         transition: 'blur',
-//         // 切り替わりのアニメーション。http://vegas.jaysalvat.com/documentation/transitions/参照。
-//         // fade、fade2、slideLeft、slideLeft2、slideRight、slideRight2、slideUp、slideUp2、slideDown、slideDown2、zoomIn、zoomIn2、zoomOut、zoomOut2、swirlLeft、swirlLeft2、swirlRight、swirlRight2、burnburn2、blurblur2、flash、flash2が設定可能。
-//         transitionDuration: 2000, // 切り替わりのアニメーション時間をミリ秒単位で設定
-//         delay: 10000, // スライド間の遅延をミリ秒単位で。
-//         animationDuration: 20000, // スライドアニメーション時間をミリ秒単位で設定
-//         animation: 'kenburns',
-//         // スライドアニメーションの種類。http://vegas.jaysalvat.com/documentation/transitions/参照。
-//         // kenburns、kenburnsUp、kenburnsDown、kenburnsRight、kenburnsLeft、kenburnsUpLeft、kenburnsUpRight、kenburnsDownLeft、kenburnsDownRight、randomが設定可能。
-//         slides: responsiveImage, //画像設定を読む
-//     });
+
+    /**
+     * [TOP-実績] スライダー
+     */
+    $("#works-top-slider").slick({
+        centerMode: true,
+        centerPadding: '3%',
+        dots: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 1000,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 750,
+                settings: {
+                    centerPadding: '20%',
+                }
+            }
+        ]
+    });
 
     $("#main-slider").slick({
         fade: true,

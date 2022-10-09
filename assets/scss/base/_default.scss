@@ -7,35 +7,41 @@
 // 基本設定 //
 /////////////
 body {
-	font-family:$base_font;
+	font-family: $base_font;
 	color: $base_text_color;
 	font-size: #{$base_fontSize}+px;
 	line-height: $base_lineHight;
 	background-color: $body_color;
 	overflow: hidden;
 }
+main {
+	@include mq(max, tb) {
+		padding-top: 58px;
+	}
+}
 
 .cts {
 	position: relative;
 	margin: 0 auto 80px;
-	padding: 0 map.get($ct_padding, pc);
 	clear: both;
-
-	@include mq(max, ct) {
+	max-width: 900px;
+	width: 100%;
+	overflow: hidden;
+	@include mq(max, 920) {
 		width: 100%;
 		min-width: 0;
 		margin: 0 auto 30px;
+		padding: 0 10px;
+	}
+	@include mq(max, tb) {
+		width: 100%;
 	}
 
-	@include mq(max, tb) {
-		padding: 0 map.get($ct_padding, sp);
-		width: 100%;
-		margin: 0 auto 80px;
-	}
 	p {
-		font-size: vw(16, 1500);
+		font-size: 14px;
 		@include mq(max, tb) {
-			font-size: vw(30, tb);
+			font-size: 13px;
+			line-height: 20px;
 		}
 	}
 }
@@ -43,9 +49,9 @@ body {
 
 // IE10,IE11以上のハック
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-body {
-	font-family: "メイリオ", Meiryo, sans-serif;
-}
+	body {
+		font-family: "メイリオ", Meiryo, sans-serif;
+	}
 }
 
 img {
@@ -66,7 +72,7 @@ a {
 
 	&:hover {
 		text-decoration: none;
-		opacity: .8;
+		opacity: .7;
 	}
 
 	&.no-df:hover,

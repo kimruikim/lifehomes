@@ -19,9 +19,8 @@ $breakpoints: (
 
 
 // サイトカラー
-$main_color: #F9AE94; // メインカラー
+$main_color: #316933; // メインカラー
 $main_back_color: #FFFDFE; // 各画面の背景色
-$flow_back_color: #FAEEEA; // 流れるニュースの背景色
 
 $color_pink: #F0525A;
 $color_pink_dark: #EA313C;
@@ -47,7 +46,7 @@ $font_color_red_dark: #FF4E54;
  */
 $back_color_gray: #6E6B6B;
 $back_color_white: #FFF;
-$back_color_black: #000;
+$back_color_black: #616161;
 
 /**
  * 線色
@@ -73,7 +72,7 @@ $ct_padding: (
 $base_text_color: $font_color_black;
 
 // リンクテキストカラー
-$link_text_color: $main_color;
+$link_text_color: $font_color_black;
 
 // line-hight
 $base_lineHight: 1.5;

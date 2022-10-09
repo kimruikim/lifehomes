@@ -21,109 +21,18 @@
 /* ページタイトル
 -----------------------------------*/
 .b-mainTitle {
-	position: relative;
-	background-color: #FFF;
-	@include mq(max, tb) {
-		height: auto;
-	}
-	.cell {
-		position: absolute;
-		@include mq(max, tb) { position: relative; }
-		&:nth-child(1) {
-			width: 50%;
-			left: 0;
-			background: url("../img/common/back_title.png") no-repeat center;
-			background-size: cover;
-			animation: fadeInLeft 1.5s ease .5s 1 normal backwards;
-			@include mq(max, tb) {
-				width: 100%;
-				height: 50vh;
-				position: relative;
-			}
-			@include mq(max, 414) {
-				height: 40vh;
-			}
-			>div {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				transform: translateY(-50%) translateX(-50%);
-				-webkit-transform: translateY(-50%) translateX(-50%);
-				@include mq(max, tb) {
-					position: relative;
-					top: 0;
-					left: 0;
-					transform: unset;
-					padding: 40px 30px;
-				}
-			}
-		}
-		&:nth-child(2) {
-			width: 52%;
-			top: 50px;
-			right: 0;
-			animation: SlideIn 1.5s ease .5s 1 normal backwards;
-
-			//animation: fadeInRight 4s ease .6s 1 normal backwards;
-			@include mq(max, tb) {
-				float: right;
-				width: 80%;
-				top: -100px;
-			}
-		}
-		&.-visible h2,
-		&.-visible span {
-			opacity: 1;
-			transform: translate(0, 0);
-		}
-	}
-	h2, span {
-		opacity: 0;
-		transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 1s, opacity linear 0.7s;
-	}
 	h2 {
-		display: inline-block;
-		font-family: 'Century Gothic', sans-serif;
-		font-weight: 600;
-		font-size: vw(40, 1500);
-		line-height: normal;
-		letter-spacing: 5px;
-		padding-bottom: 2px;
-		margin-bottom: 12px;
-		border-bottom: 1px solid $back_color_black;
-		color: $color_pink_dark_2;
-
-		transform: translate(0, 40px);
-		transition-delay: 0.25s;
-		@include mq(max, tb) {
-			font-size: vw(43, tb);
-		}
+		font-family: 'Open Sans', sans-serif;
+		font-size: 45px;
 	}
 	span {
 		display: block;
-		font-size: vw(20, 1500);
-		letter-spacing: 6px;
-		font-family: adobe-hebrew, sans-serif;
-		font-weight: bold;
-
-		transform: translate(0, 30px);
-		transition-delay: 0.45s;
-		@include mq(max, tb) {
-			font-size: vw(30, tb);
-		}
-	}
-}
-.under-page {
-	&__contents {
-		margin: 130px 0;
-		z-index: 0;
+		font-size: 12px;
 		position: relative;
-		@include mq(max, tb) {
-			margin: 130px 0 -20px;
-			top: -20px;
-		}
+		font-family: "NotoSansJP-Bold";
 	}
 }
+
 @keyframes SlideIn {
 	0% {
 		opacity: 0;
@@ -217,314 +126,52 @@
 			}
 		}
 	}
-
-	&02 {
-		position: relative;
-		color: #FF0030;
-		padding-left: 20px;
-		font-size: 22px;
-		font-family: "NotoSansJP-Bold";
-		line-height: 1.2;
-		margin-bottom: 25px;
-		@include mq(max, tb) {
-			font-size: 15px;
-			margin-bottom: 15px;
-		}
-
-		&::before {
-			content: "";
-			position: absolute;
-			width: 8px;
-			height: 100%;
-			background-color: #FF0030;
-			top: 0;
-			left: 0;
-		}
-
-		span {
-			font-size: 80%;
-			display: inline-block;
-			margin-left: 8px;
-		}
-	}
-
-	&03 {
-		position: relative;
-		font-size: 24px;
-		font-family: "NotoSansJP-Bold";
-		line-height: 1.2;
-		padding-bottom: 10px;
-		margin-bottom: 18px;
-		@include mq(max, tb) {
-			font-size: 15px;
-		}
-
-		&::before {
-			content: "";
-			position: absolute;
-			width: 100%;
-			height: 3px;
-			background-color: #000;
-			bottom: 0;
-			left: 0;
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			width: 50px;
-			height: 3px;
-			background-color: #FF0030;
-			bottom: 0;
-			left: 0;
-		}
-	}
-
-	&04 {
-		position: relative;
-		font-size: 58px;
-		font-family: "Montserrat-BlackItalic","NotoSansJP-Black";
-		text-align: center;
-		margin-bottom: 90px;
-		line-height: 1.2;
-		padding-bottom: 20px;
-		@include mq(max, tb) {
-			font-size: 40px;
-			margin-bottom: 20px;
-		}
-
-		&::before {
-			content: "";
-			width: 100px;
-			height: 3px;
-			background-color: #FB0030;
-			position: absolute;
-			left: 50%;
-			bottom: 0;
-			transform: translateX(-50%);
-			@include mq(max, tb) {
-				width: 50px;
-				height: 2px;
-			}
-		}
-
-		div {
-			display: inline-block;
-		}
-
-		span {
-			display: block;
-			font-size: 18px;
-			text-align: center;
-			font-family: "NotoSansJP-Medium";
-		}
-	}
-
-	&05 {
-		font-size: 18px;
-		font-family: "NotoSansJP-Bold";
-		line-height: 1.6;
-		margin-bottom: 18px;
-		background-color: #EDEDED;
-		padding: 16px;
-		@include mq(max, tb) {
-			font-size: 14px;
-			padding: 12px;
-		}
-
-		span {
-			position: relative;
-			padding-left: 25px;
-			display: inline-block;
-			@include mq(max, tb) {
-				padding-left: 18px;
-			}
-
-			&::before {
-				content: "";
-				height: 100%;
-				width: 5px;
-				position: absolute;
-				top: 0;
-				left: 0;
-				background-color: #E6143C;
-				@include mq(max, tb) {
-					width: 3px;
-				}
-			}
-		}
-	}
 }
-
-
-/* リスト、アイコン
------------------------------------*/
-/* リスト ドット */
-.list-dot {}
-
-/* 番号リスト */
-ol {}
-
 
 /* テーブル
 -----------------------------------*/
 
-
-/* [流れる] レイアウト
------------------------------------*/
-
-//_:-ms-lang(x)::-ms-backdrop
-.flow-box {
-	display: -ms-grid;
-	overflow: hidden;
-	&__wrap {
-		display: flex;
-		flex: none;
-		overflow: hidden;
-	}
-}
-.flow-list {
-	display: flex;
-	align-items: center;
-	flex: none;
-	&__item {
-		margin-right: 20px;
-		img {
-			@include mq(max, tb) { width: 120px; }
-		}
-	}
-}
-.flow-left { animation:infinity-scroll-left 20s infinite linear .5s both; }
-
-@keyframes infinity-scroll-left {
-	from {
-		transform: translateX(0%);
-	}
-	to {
-		transform: translateX(-100%);
-	}
-}
-
 /* [ボタン関連] レイアウト
 -----------------------------------*/
 .more-btn {
-	display: block;
 	border-radius: 5px;
-	width: 197px;
-	background-color: $main_color;
-	text-align: center;
-	font-size: vw(18, 1500);
-	font-family: toppan-bunkyu-mincho-pr6n, serif;
-	padding: 10px 0;
-	color: $font_color_black;
+	width: 140px;
+	float: right;
 	@include mq(max, tb) {
-		width: 200px;
-		margin: auto;
-		font-size: vw(35, tb);
+		width: 180px;
 	}
-}
-
-.item-btn {
-	display: inline-block;
-	background-color: $color_pink_thin;
-	color: $color_pink_dark;
-	font-size: vw(16, 1500);
-	padding: 5px 60px;
-	border-radius: 10px;
-	@include mq(max, tb) {
+	a {
+		display: block;
 		width: 100%;
-		padding: 5px 10px;
-		font-size: vw(30, tb);
-	}
-}
-
-/* [お知らせ] レイアウト
------------------------------------*/
-.news-box {
-	max-width: $mainWidth;
-	padding: 0 100px;
-	width: 100%;
-	margin: 0 auto 120px;
-	text-align: center;
-	overflow: hidden;
-	z-index: 0;
-	position: relative;
-	@include mq(max, tb) {
-		max-width: 100%;
-		padding: 0;
-		margin-bottom: 50px;
-	}
-	.item-btn {
-		margin-bottom: 35px;
+		text-align: left;
+		font-size: 16px;
+		font-family: "Open Sans", sans-serif;
 		@include mq(max, tb) {
-			margin-bottom: 20px;
-		}
-	}
-	.more-btn {
-		float: right;
-		@include mq(max, tb) { float: none; }
-	}
-}
-.news-list {
-	width: 100%;
-	margin: 0 auto 20px;
-	@include mq(max, tb) {
-		max-width: 100%;
-		margin: 0 auto 20px;
-	}
-	&__item {
-		display: flex;
-		align-items: start;
-		padding: 20px 0;
-		border-bottom: 1px solid $border_color_black_thin;
-		@include mq(max, tb) {
-			padding: 15px 0;
+			font-size: 18px;
 		}
 		span {
 			display: block;
-			margin-right: 90px;
-			font-size: vw(16, 1500);
-			@include mq(max, tb) {
-				font-size: vw(30, tb);
-				margin-right: 20px;
-			}
-		}
-		p {
-			font-size: vw(16, 1500);
-			color: $font_color_black_dark;
-			text-align: left;
-			@include mq(max, tb) {
-				font-size: vw(30, tb);
-			}
+			margin: 0 0 5px 0;
 		}
 	}
 }
-.screen-reader-text { display: none; }
-
-.page-numbers {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	li {
-		padding: 0 8px;
-	}
-}
-
-/* [SNSリスト] レイアウト
------------------------------------*/
-.sns-list {
-	display: flex;
-	margin: 20px 0;
-	@include mq(max, tb) {
-		margin: 30px 0 40px;
-	}
-	&__item {
-		padding: 0 7px;
-		a {
-			font-size: vw(25, 1500);
-			@include mq(max, tb) {
-				font-size: vw(65, tb);
-			}
+.stick-arrow {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	>div {
+		background-color: $main_color;
+		&:first-child {
+			height: 2px;
+		}
+		&:last-child {
+			position: absolute;
+			top: 0;
+			right: 0;
+			transform-origin: right bottom;
+			width: 20px;
+			height: 2px;
+			transform: rotate(45deg);
 		}
 	}
 }
@@ -728,134 +375,15 @@ ol {}
 }
 
 
-/* [Q&Aアコーディオン] レイアウト
+/* 共通クラス
 -----------------------------------*/
-.accordion-list {
+.flex-list {
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
 	align-items: center;
-	@include mq(max, tb) {
-		display: block;
-	}
-	li {
-		width: 46%;
-		@include mq(max, 1000) {
-			width: 100%;
-			margin-bottom: 10px;
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-		.txt {
-			&-q {
-				//background: url(/images/entry/ao/ao_tx02.svg) left 16px no-repeat;
-				font-size: 24px;
-				padding: 16px 48px;
-				border-bottom: 1px dashed #333;
-				font-family: "NotoSansJP-Bold";
-				position: relative;
-				line-height: 1.3;
-				cursor: pointer;
-				@include mq(max, tb) {
-					font-size: 15px;
-					background-size: 25px;
-					padding: 16px 40px;
-				}
-
-				&::before,&::after {
-					content: "";
-					width: 20px;
-					height: 3px;
-					right: 0;
-					bottom: 50%;
-					display: block;
-					transform: translateY(50%);
-					background: #FF0030;
-					transition: linear .2s;
-					position: absolute;
-
-				}
-
-				&::after {
-					height: 20px;
-					width: 4px;
-					right: 8px;
-				}
-
-				&.open {
-					&::after {
-						transform: translateY(50%) rotate(-90deg);
-						transform-origin: center;
-					}
-				}
-			}
-			&-a {
-				background: #F5F5F5;
-				padding: 16px;
-				display: none;
-				@include mq(max, tb) {
-					font-size: 12.5px;
-					padding: 16px 12px;
-				}
-			}
-		}
-	}
+	justify-content: space-between;
 }
-
-
-/* [instagram] レイアウト
------------------------------------*/
-#sec-insta {
-	@include mq(max, tb) {
-		padding: 0;
-		margin-bottom: 60px;
-	}
-}
-.insta-box {
-	background: url("../img/common/back_insta.png") no-repeat center;
-	max-width: $mainWidth;
-	width: 100%;
-	padding: 30px 40px;
-	border-radius: 10px;
-	position: relative;
-	margin: auto;
-	@include mq(max, tb) { padding: 10px; }
-	&__contents {
-		background: rgba(255, 255, 255, .5);
-		border-radius: 10px;
-		text-align: center;
-		> a {
-			display: block;
-			padding: 60px 0;
-			color: $font_color_black;
-			@include mq(max, tb) { padding: 20px 0; }
-			img {
-				margin-bottom: 10px;
-				@include mq(max, tb) { width: 10vw; }
-			}
-			p {
-				font-size: vw(18, 1500);
-				@include mq(max, ct) { font-size: vw(20, ct); }
-				@include mq(max, tb) { font-size: vw(20, tb); }
-			}
-		}
-	}
-	.side-item {
-		z-index: -1;
-		position: absolute;
-		img {
-			width: 100px;
-			@include mq(max, tb) { width: auto; }
-		}
-		&__type_bnr1 {
-			right: -67px;
-			bottom: -35px;
-			@include mq(max, tb) {
-				width: 100px;
-				bottom: -60px;
-				right: -40px;
-			}
-		}
-	}
+.text-overflow {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
 }
