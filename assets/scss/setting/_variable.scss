@@ -22,37 +22,26 @@ $breakpoints: (
 $main_color: #316933; // メインカラー
 $main_back_color: #FFFDFE; // 各画面の背景色
 
-$color_pink: #F0525A;
-$color_pink_dark: #EA313C;
-$color_pink_dark_2: #F5989D;
-$color_pink_thin: #FFDDD1;
-$color_pink_thin_1: #FFF2F5;
-$color_pink_thin_2: #FDDFE4;
-$color_orangePink: #F9AE94;
-
 /**
  * フォント色
  */
-$font_color_black: #1F1F1F;
-$font_color_black_dark: #000;
-$font_color_black_thin: #797373;
+$font_color_black: #000;
+$font_color_black_thin: #707070;
 $font_color_white: #FFF;
-$font_color_red: #E64040;
-$font_color_red_dark: #FF4E54;
 
 
 /**
  * 背景色
  */
-$back_color_gray: #6E6B6B;
 $back_color_white: #FFF;
 $back_color_black: #616161;
+$back_color_gray: #F9F8F8;
 
 /**
  * 線色
  */
 $border_color_black: #000;
-$border_color_black_thin: #E8E8E8;
+$border_color_black_thin: #E5E5E5;
 
 // body
 $body_color: $main_back_color;

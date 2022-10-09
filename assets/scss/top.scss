@@ -95,6 +95,7 @@
       p {
         margin-top: 5px;
         font-size: 12px;
+        font-family: "NotoSansJP-Bold";
         @include mq(max, tb) {
           font-size: 14px;
         }
@@ -147,13 +148,16 @@
       }
     }
   }
+  >p {
+    font-family: 'Sawarabi Gothic', sans-serif;
+  }
 }
 .philosophy-list {
   justify-content: center;
   margin: 50px auto 90px;
   @include mq(max, tb) {
     justify-content: space-between;
-    align-items: unset;
+    align-items: start;
     margin: 30px auto 50px;
   }
   &__item {
@@ -162,15 +166,12 @@
     @include mq(max, tb) {
       margin-right: 0;
       width: 32%;
-      p {
-        font-size: 10px;
-        line-height: 18px;
-      }
     }
     &:last-child { margin-right: 0; }
     h3 {
       font-size: 20px;
       margin: 20px 0 8px;
+      font-family: "NotoSansJP-Bold";
       @include mq(max, tb) {
         font-size: 16px;
         margin: 10px 0 5px;
@@ -178,6 +179,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+    }
+    >p {
+      font-family: 'Sawarabi Gothic', sans-serif;
+      @include mq(max, tb) {
+        font-size: 10px;
+        line-height: 18px;
       }
     }
   }

@@ -1,0 +1,149 @@
+@use "setting/variable" as *;
+@use "setting/mixin" as *;
+@use "setting/fonts" as *;
+@use "setting/function" as *;
+@use "sass:map";
+
+
+/* [全体]
+-----------------------------------*/
+.info-box {
+  align-items: unset;
+  @include mq(max, tb) {
+    display: block;
+  }
+  &__main {
+    width: 640px;
+    @include mq(max, tb) {
+      width: 100%;
+    }
+    &-contents {
+      h3 {
+        font-size: 22px;
+        font-family: "NotoSansJP-Bold";
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  &__sidebar {
+    width: 200px;
+    @include mq(max, tb) {
+      width: 100%;
+    }
+  }
+}
+
+
+/* [メインコンテンツ]
+-----------------------------------*/
+.info-item {
+  margin-bottom: 20px;
+  @include mq(max, tb) {
+    align-items: start;
+  }
+  img {
+    width: 160px;
+    @include mq(max, tb) {
+      width: 30%;
+    }
+  }
+  >div {
+    width: 470px;
+    @include mq(max, tb) {
+      width: 67%;
+    }
+    >a {
+      display: block;
+      font-size: 15px;
+      font-family: "NotoSansJP-Bold";
+      margin-bottom: 10px;
+      @include mq(max, tb) {
+        margin-bottom: 7px;
+      }
+    }
+    >p {
+      font-size: 12px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      @include mq(max, tb) {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.icon-list {
+  justify-content: start;
+  margin-bottom: 6px;
+  span {
+    display: block;
+    font-size: 12px;
+    @include mq(max, tb) {
+      font-size: 14px;
+    }
+  }
+}
+.date-icon {
+  display: block;
+  font-size: 12px;
+  color: $font_color_black_thin;
+  @include mq(max, tb) {
+    font-size: 14px;
+  }
+}
+.category-icon {
+  color: $main_color;
+  margin-left: 15px;
+  @include mq(max, tb) {
+    margin-left: 8px;
+  }
+}
+
+.btn-list {
+  margin: 50px 0 0;
+  justify-content: center;
+  @include mq(max, tb) {
+    margin: 30px 0;
+  }
+  a {
+    display: block;
+    width: 194px;
+    text-align: center;
+    background-color: $main-color;
+    color: $font-color_white;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+}
+
+/* [サイドバーコンテンツ]
+-----------------------------------*/
+.s-box {
+  &__new {
+    ul {
+      padding: 20px 0 0;
+      li {
+        margin-bottom: 15px;
+        &:last-child { margin-bottom: 0; }
+        a {
+          display: block;
+          font-size: 12px;
+          margin-top: 5px;
+          @include mq(max, tb) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  h3 {
+    background-color: $main-color;
+    color: $font-color_white;
+    font-size: 14px;
+    padding: 7px 10px;
+  }
+}

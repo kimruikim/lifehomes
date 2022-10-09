@@ -13,6 +13,22 @@ body {
 	line-height: $base_lineHight;
 	background-color: $body_color;
 	overflow: hidden;
+	&:not(.top) {
+		main {
+			padding-top: 97px;
+			@include mq(max, tb) {
+				padding-top: 58px;
+			}
+		}
+		.b-mainTitle {
+			text-align: center;
+			margin-bottom: 60px;
+			@include mq(max, tb) {
+				margin-bottom: 30px;
+				h2 { font-size: 38px; }
+			}
+		}
+	}
 }
 main {
 	@include mq(max, tb) {

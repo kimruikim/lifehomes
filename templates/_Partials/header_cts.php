@@ -2,13 +2,18 @@
     <div class="l-header">
         <h1 class="l-logo">
             <a href="/">
-                <img src="/assets/img/common/header/logo.png" alt="ライフホームズ株式会社" class="pc">
-                <img src="/assets/img/common/header/logo_s.png" alt="ライフホームズ株式会社" class="sp">
+                <?php if($page_class == 'top'): ?>
+                    <img src="/assets/img/common/header/logo.png" alt="ライフホームズ株式会社" class="pc">
+                    <img src="/assets/img/common/header/logo_s.png" alt="ライフホームズ株式会社" class="sp">
+                <?php else: ?>
+                    <img src="/assets/img/common/header/logo_s.png" alt="ライフホームズ株式会社" class="pc">
+                    <img src="/assets/img/common/header/logo_s.png" alt="ライフホームズ株式会社" class="sp">
+                <?php endif; ?>
             </a>
         </h1>
         <ul class="global-navi">
-            <li class="global-navi__item<?php if ($page_class == 'management_philosophy') echo ' ac' ?>">
-                <a href="/info">
+            <li class="global-navi__item<?php if ($page_class == 'info') echo ' ac' ?>">
+                <a href="/information">
                     <span>Information</span>
                     <span>お知らせ</span>
                 </a>

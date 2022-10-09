@@ -1,7 +1,7 @@
 <?php
 $url = $_SERVER['REQUEST_URI'];
 // [meta] 設定
-$site_name = '';
+$site_name = 'ライフホームズ株式会社';
 ?>
     <!DOCTYPE html>
     <html lang="ja">

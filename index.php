@@ -1,22 +1,22 @@
 <?php
-$page_class = 'index';
-
+$page_class = 'top';
 $title = 'TOP';
 
 $add_css_area = <<< EOD
-<!-- スライダー CSS -->
+<!-- スライダー/CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"> <!-- FontAwesome CSS -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"> <!-- FontAwesome/CSS -->
 
-<link rel="stylesheet" href="/assets/css/top.css"> <!-- TOP画面 CSS -->
+<link rel="stylesheet" href="/assets/css/top.css"> <!-- TOP/CSS -->
 EOD;
 
 $add_js_area = <<< EOD
-<!-- スライダー JS -->
+<!-- スライダー/JS -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 <script src="/assets/js/slider.js"></script>
+<script src="/assets/js/top.js"></script>
 EOD;
 
 include $_SERVER['DOCUMENT_ROOT'] . '/templates/_Partials/header.php'; ?>
@@ -45,15 +45,6 @@ include $_SERVER['DOCUMENT_ROOT'] . '/templates/_Partials/header.php'; ?>
                     <p class="text-overflow">お知らせをここに表示。ホームページを公開いたしました。お知らせをここに表示。ホームページを公開いたしました。</p>
                 </li>
             </ul>
-            <div class="more-btn">
-                <a href="">
-                    <span>More Info</span>
-                    <div class="stick-arrow">
-                        <div></div>
-                        <div></div>
-                    </div>
-                </a>
-            </div>
         </section>
 
         <section id="sec02">

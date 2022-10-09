@@ -29,7 +29,7 @@
 		display: block;
 		font-size: 12px;
 		position: relative;
-		font-family: "NotoSansJP-Bold";
+		font-family: 'Sawarabi Gothic', sans-serif;
 	}
 }
 
@@ -69,19 +69,15 @@
 .pnkz {
 	display: flex;
 	font-size: 14px;
-	font-family: "NotoSansJP-Regular";
 	line-height: 1;
-	margin: 30px auto 52px;
+	margin: 30px auto 55px;
 	@include mq(max, tb) {
-		display: none;
+		margin: 20px auto;
 	}
-
 	li {
-
 		a {
 			color: #333;
 		}
-
 		&:not(:first-of-type) {
 
 			&::before {
