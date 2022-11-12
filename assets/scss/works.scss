@@ -5,5 +5,187 @@
 @use "sass:map";
 
 
-/* xxx
+/*-----------------------------------
+ * [実績一覧]
 -----------------------------------*/
+
+/* 実績一覧リスト
+-----------------------------------*/
+.works-list {
+  max-width: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  &__item {
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 25px;
+    @include mq(max, 900) {
+      max-width: 25%;
+    }
+    @include mq(max, tb) {
+      max-width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    a {
+      display: block;
+    }
+    h3 {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  }
+}
+
+/* ページャーリスト
+-----------------------------------*/
+.pager-list {
+  justify-content: center;
+  margin: 30px auto 40px;
+  li {
+    width: 20px;
+    margin-right: 10px;
+    background-color: $back_color_black_thin;
+    color: $font_color_black_thin;
+    font-size: 12px;
+    padding: 3px 0;
+    text-align: center;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+
+
+/*-----------------------------------
+ * [実績詳細]
+-----------------------------------*/
+
+/* 実績タイトル関連
+-----------------------------------*/
+.b-building-title {
+  text-align: center;
+  font-family: "NotoSansJP-Bold";
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.p-works-detail {
+  h3 {
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    margin: 30px 0 15px;
+  }
+}
+
+
+/* 詳細：建物概要
+-----------------------------------*/
+.works-overflow {
+  width: 100%;
+  border-top: 1px solid $border_color_black_thin;
+  border-left: 1px solid $border_color_black_thin;
+  margin-bottom: 50px;
+  >div {
+    @include mq(max, tb) {
+      display: block;
+    }
+  }
+  dl {
+    width: 50%;
+    @include mq(max, tb) {
+      width: 100%;
+    }
+    dt, dd {
+      padding: 15px 0;
+      border-right: 1px solid $border_color_black_thin;
+      border-bottom: 1px solid $border_color_black_thin;
+      font-size: 14px;
+    }
+    dt {
+      width: 160px;
+      text-align: center;
+      background-color: $back_color_gray;
+      @include mq(max, tb) {
+        width: 25%;
+      }
+    }
+    dd {
+      width: 290px;
+      padding: 15px 15px;
+      line-height: 20px;
+      @include mq(max, tb) {
+        width: 75%;
+      }
+    }
+  }
+}
+
+
+/* 詳細：スライダー
+-----------------------------------*/
+.works-slider {
+  max-width: 910px;
+  width: 100%;
+  margin: 0 auto 10px;
+  .slick-slide {
+    margin: 0 5px;
+  }
+  &__main {
+    .slick-slide {
+      div {
+        width: 100%;
+      }
+    }
+  }
+  &__thumb {
+    margin: 20px 0 0;
+    .slick-slide {
+      cursor: pointer;
+      &:hover {
+        opacity: .85;
+      }
+    }
+    .slick-arrow {
+      z-index: 1;
+      background-color: rgba(49,105,51, .9);
+      width: 34px;
+      height: 40px;
+      &:before {
+        line-height: normal;
+        opacity: 1;
+        font-size: 18px;
+      }
+    }
+    .slick-prev {
+      left: 5px;
+      &:before {
+        content: "\03c";
+      }
+    }
+    .slick-next {
+      right: 3px;
+      &:before {
+        content: "\03e";
+      }
+    }
+  }
+}
+
+/* ボタン（TOP/一覧へ戻る）
+-----------------------------------*/
+.btn-top {
+  display: block;
+  max-width: 194px;
+  width: 100%;
+  margin: auto;
+  font-size: 14px;
+  border: 1px solid $border_color_black_thin;
+  padding: 15px 0;
+  text-align: center;
+}

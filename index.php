@@ -52,7 +52,7 @@ include $_SERVER['DOCUMENT_ROOT'] . '/templates/_Partials/header.php'; ?>
                 <span>弊社の業務実績をごあんない致します。</span>
                 <h2>Works</h2>
             </div>
-            <div class="work-list">
+            <div class="works-list">
                 <ul class="slider" id="works-top-slider">
                     <li>
                         <a href="">

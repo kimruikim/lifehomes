@@ -22,4 +22,24 @@ $(function() {
         ]
     });
 
+    $('.works-slider__main').slick({
+        arrows:false,
+        asNavFor:'.works-slider__thumb',
+    });
+    $('.works-slider__thumb').slick({
+        asNavFor:'.works-slider__main',
+        focusOnSelect: true,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 900,
+                settings: {
+                    arrows:false,
+                    adaptiveHeight: true
+                }
+            }
+        ]
+    });
+
 });
