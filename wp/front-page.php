@@ -25,8 +25,9 @@ include( get_stylesheet_directory() . '/templates/_Partials/header.php' ); ?>
 <main>
 
     <section class="b-mainImg">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/main.png" alt="メイン画像" class="pc">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/main_s.png" alt="メイン画像" class="sp">
+        <div>
+            <p>生活が豊かになる <br class="sp">建築＆リフォーム<span>We will do our best to support you.</span></p>
+        </div>
     </section>
 
     <section class="cts" id="sec01">
@@ -74,42 +75,42 @@ include( get_stylesheet_directory() . '/templates/_Partials/header.php' ); ?>
             <h2>Works</h2>
         </div>
         <div class="works-list">
-            <ul class="slider" id="works-top-slider">
-                <li>
-                    <a href="">
-                        <img src="https://125naroom.com/demo/img/itukanokotonokoto01.jpg" alt="">
-                        <p>アピールコメントなどを表示させます</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="https://125naroom.com/demo/img/itukanokotonokoto01.jpg" alt="">
-                        <p>アピールコメントなどを表示させます</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="https://125naroom.com/demo/img/itukanokotonokoto01.jpg" alt="">
-                        <p>アピールコメントなどを表示させます</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="https://125naroom.com/demo/img/itukanokotonokoto01.jpg" alt="">
-                        <p>アピールコメントなどを表示させます</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="https://125naroom.com/demo/img/itukanokotonokoto01.jpg" alt="">
-                        <p>アピールコメントなどを表示させます</p>
-                    </a>
-                </li>
-            </ul>
+            <?php
+            // 実績取得
+            $works_args = array(
+                'post_type' => 'post_works',
+                'posts_per_page' => 10,
+                'orderby' => 'post_date',
+                'order' => 'DESC',
+            );//取り出す投稿を指定
+            $works_query = new WP_Query( $works_args );
+            ?>
+            <?php if ( $works_query->have_posts() ) : ?>
+                <ul class="slider" id="works-top-slider">
+                    <?php
+                    while ( $works_query->have_posts() ) :
+                        $works_query->the_post();
+                        ?>
+                        <li>
+                            <a href="works/detail?id=<?php the_ID(); ?>">
+                                <?php $estate_img1 = get_field('estate_img1'); ?>
+                                <?php if($estate_img1 != ''): ?>
+                                    <img src="<?php the_field('estate_img1') ?>" alt="">
+                                <?php else: ?>
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/works/noimage.png" alt="noimage">
+                                <?php endif; ?>
+                                <p><?php the_title(); ?></p>
+                            </a>
+                        </li>
+                    <?php endwhile; ?>
+                </ul>
+            <?php else : ?>
+                <div class="no-contribution"><p>実績はありません。</p></div>
+            <?php endif; // have_post() ?>
         </div>
         <div class="cts">
             <div class="more-btn">
-                <a href="">
+                <a href="/works">
                     <span>More Info</span>
                     <div class="stick-arrow">
                         <div></div>

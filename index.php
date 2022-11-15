@@ -24,8 +24,9 @@ include $_SERVER['DOCUMENT_ROOT'] . '/templates/_Partials/header.php'; ?>
     <main>
 
         <section class="b-mainImg">
-            <img src="/assets/img/top/main.png" alt="メイン画像" class="pc">
-            <img src="/assets/img/top/main_s.png" alt="メイン画像" class="sp">
+            <div>
+                <p>生活が豊かになる <br class="sp">建築＆リフォーム<span>We will do our best to support you.</span></p>
+            </div>
         </section>
 
         <section class="cts" id="sec01">
