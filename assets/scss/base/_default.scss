@@ -6,6 +6,17 @@
 //////////////
 // 基本設定 //
 /////////////
+li a, p a {
+	text-decoration: none !important;
+}
+table {
+	th, td {
+		border: none;
+	}
+}
+h3:before, h3:after {
+	content: none;
+}
 body {
 	font-family: $base_font;
 	color: $base_text_color;
@@ -89,6 +100,7 @@ a {
 	&:hover {
 		text-decoration: none;
 		opacity: .7;
+		color: unset;
 	}
 
 	&.no-df:hover,

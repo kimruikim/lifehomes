@@ -2,6 +2,7 @@
 $page_class = 'works';
 $title = '実績';
 $current_url = get_template_directory_uri();
+$filemtime = filemtime( get_template_directory().'/style.css');
 
 // [パンくずリスト用変数]
 $pnkz_list = [
@@ -10,7 +11,7 @@ $pnkz_list = [
 ];
 
 $add_css_area = <<< EOD
-<link rel="stylesheet" href="{$current_url}/assets/css/works.css"> <!-- 実績/CSS -->
+<link rel="stylesheet" href="{$current_url}/assets/css/works.css?{$filemtime}"> <!-- 実績/CSS -->
 EOD;
 
 $add_js_area = <<< EOD
@@ -33,7 +34,7 @@ include( get_stylesheet_directory() . '/templates/_Partials/header.php' ); ?>
             $works_args = array(
                 'paged'     => get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1,
                 'post_type' => 'post_works',
-                'posts_per_page' => 10,
+                'posts_per_page' => 2,
                 'orderby' => 'post_date',
                 'order' => 'DESC',
             );//取り出す投稿を指定

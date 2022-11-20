@@ -15,10 +15,12 @@
   max-width: 100%;
   width: 100%;
   flex-wrap: wrap;
+  justify-content: normal;
   &__item {
     max-width: 200px;
     width: 100%;
     margin-bottom: 25px;
+    margin-right: calc(100px / 3);
     @include mq(max, 900) {
       max-width: 25%;
     }
@@ -27,6 +29,9 @@
       img {
         width: 100%;
       }
+    }
+    &:nth-child(4n) {
+      margin-right: 0;
     }
     a {
       display: block;
@@ -41,22 +46,33 @@
 
 /* ページャーリスト
 -----------------------------------*/
-.pager-list {
+.pager-list ul.page-numbers {
   justify-content: center;
   margin: 30px auto 40px;
   li {
     width: 20px;
     margin-right: 10px;
-    background-color: $back_color_black_thin;
-    color: $font_color_black_thin;
-    font-size: 12px;
-    padding: 3px 0;
     text-align: center;
     &:last-child {
       margin-right: 0;
     }
+    span, a {
+      font-size: 12px;
+      padding: 3px 0;
+      background-color: $back_color_black_thin;
+      color: $font_color_black_thin;
+    }
+    span.page-numbers {
+      &.current {
+        background-color: #616161;
+      }
+    }
+    a.page-numbers {
+      border: none;
+    }
   }
 }
+
 
 
 

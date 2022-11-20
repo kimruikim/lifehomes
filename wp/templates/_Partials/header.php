@@ -11,9 +11,8 @@ $site_name = 'ライフホームズ株式会社';
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="format-detection" content="telephone=no">
-        <meta name="description" content="<?php echo $description; ?>">
+        <?php wp_head(); ?>
 
-        <title><?php if($title) echo $title .' | '; ?><?php echo $site_name; ?></title>
 
         <!-- [CSS] 関連 -->
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css">
