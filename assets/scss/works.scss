@@ -22,10 +22,12 @@
     margin-bottom: 25px;
     margin-right: calc(100px / 3);
     @include mq(max, 900) {
-      max-width: 25%;
+      max-width: 24%;
+      margin-right: 1%;
     }
     @include mq(max, tb) {
       max-width: 100%;
+      margin-right: 0;
       img {
         width: 100%;
       }
@@ -61,19 +63,38 @@
       padding: 3px 0;
       background-color: $back_color_black_thin;
       color: $font_color_black_thin;
+      border: none;
     }
     span.page-numbers {
       &.current {
         background-color: #616161;
+        border-radius: 0;
       }
     }
     a.page-numbers {
       border: none;
+      border-radius: 0;
     }
   }
 }
 
 
+//.pager-list {
+//  justify-content: center;
+//  margin: 30px auto 40px;
+//  li {
+//    width: 20px;
+//    margin-right: 10px;
+//    background-color: $back_color_black_thin;
+//    color: $font_color_black_thin;
+//    font-size: 12px;
+//    padding: 3px 0;
+//    text-align: center;
+//    &:last-child {
+//      margin-right: 0;
+//    }
+//  }
+//}
 
 
 

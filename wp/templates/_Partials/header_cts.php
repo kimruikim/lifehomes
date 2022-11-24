@@ -12,12 +12,12 @@
             </a>
         </h1>
         <ul class="global-navi">
-<!--            <li class="global-navi__item--><?php //if ($page_class == 'info') echo ' ac' ?><!--">-->
-<!--                <a href="/information">-->
-<!--                    <span>Information</span>-->
-<!--                    <span>お知らせ</span>-->
-<!--                </a>-->
-<!--            </li>-->
+            <li class="global-navi__item sp">
+                <a href="/">
+                    <span>TOP</span>
+                    <span>トップページ</span>
+                </a>
+            </li>
             <li class="global-navi__item<?php if ($page_class == 'works') echo ' ac' ?>">
                 <a href="/works">
                     <span>Works</span>

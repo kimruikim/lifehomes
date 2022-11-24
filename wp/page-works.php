@@ -34,7 +34,7 @@ include( get_stylesheet_directory() . '/templates/_Partials/header.php' ); ?>
             $works_args = array(
                 'paged'     => get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1,
                 'post_type' => 'post_works',
-                'posts_per_page' => 2,
+                'posts_per_page' => 8,
                 'orderby' => 'post_date',
                 'order' => 'DESC',
             );//取り出す投稿を指定
@@ -72,14 +72,6 @@ include( get_stylesheet_directory() . '/templates/_Partials/header.php' ); ?>
                     the_posts_pagination($args);
                     ?>
                 </div>
-
-                <ul class="pager-list flex-list">
-                    <li class="pager-list__item p-first">&lt;</li>
-                    <li class="pager-list__item">1</li>
-                    <li class="pager-list__item">2</li>
-                    <li class="pager-list__item">3</li>
-                    <li class="pager-list__item p-last">&gt;</li>
-                </ul>
             <?php else : ?>
                 <div class="no-contribution"><p>実績はありません。</p></div>
             <?php endif; // have_post() ?>

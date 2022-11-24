@@ -22,7 +22,15 @@ include( get_stylesheet_directory() . '/templates/_Partials/header.php' ); ?>
         <?php include( get_stylesheet_directory() . '/templates/_Partials/pnkz.php' ); ?>
 
         <section class="cts">
-            <?php echo do_shortcode('[mwform_formkey key="60"]'); ?>
+            <div class="thanks-box">
+
+                <img src="http://dev.lifehomes.jp/wp-content/themes/lightning/_g3/assets/img/contact/logo.png" alt="" />
+                <h3>お問い合わせを承りました。</h3>
+
+                <?php echo do_shortcode('[mwform_formkey key="60"]'); ?>
+
+                <a href="/">トップページへ</a>
+            </div>
         </section>
     </main>
 

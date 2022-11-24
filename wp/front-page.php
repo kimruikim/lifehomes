@@ -26,7 +26,7 @@ include( get_stylesheet_directory() . '/templates/_Partials/header.php' ); ?>
 
     <section class="b-mainImg">
         <div>
-            <p>生活が豊かになる <br class="sp">建築＆リフォーム<span>We will do our best to support you.</span></p>
+            <p>生活が豊かになる <br class="sp">建築＆リフォーム<span>We will do our best to support you</span></p>
         </div>
     </section>
 
@@ -53,9 +53,7 @@ include( get_stylesheet_directory() . '/templates/_Partials/header.php' ); ?>
                     ?>
                     <li class="news-list__item flex-list">
                         <span class="date-icon"><?php echo esc_html( get_the_date() ); ?></span>
-                        <span class="category-icon"><strong>
-                                <?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?>
-                            </strong></span>
+                        <span class="category-icon"><strong><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></strong></span>
                         <?php if(get_field('url') != ''): ?>
                             <a href="<?php the_field('url') ?>" target="_blank"><?php the_title(); ?></a>
                         <?php else: ?>
@@ -151,7 +149,7 @@ include( get_stylesheet_directory() . '/templates/_Partials/header.php' ); ?>
         </ul>
         <ul class="subMenu-list flex-list">
             <li class="subMenu-list__item">
-                <a href="" class="flex-list">
+                <a href="/company" class="flex-list">
                     <div>
                         <h3>Company</h3>
                         <span>会社概要</span>
@@ -160,7 +158,7 @@ include( get_stylesheet_directory() . '/templates/_Partials/header.php' ); ?>
                 </a>
             </li>
             <li class="subMenu-list__item">
-                <a href="" class="flex-list">
+                <a href="/contact" class="flex-list">
                     <div>
                         <h3>Contact</h3>
                         <span>お問い合わせ</span>

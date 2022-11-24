@@ -33,7 +33,7 @@ include( get_stylesheet_directory() . '/templates/_Partials/header.php' ); ?>
                 </tr>
                 <tr>
                     <th>本社所在地</th>
-                    <td>〒900-0003  県那覇市安謝1-22-56<br>
+                    <td>〒900-0003  沖縄県那覇市安謝1-22-56<br>
                         TEL 098-867-3530 FAX 098-867-3540</td>
                 </tr>
                 <tr>
@@ -86,7 +86,9 @@ include( get_stylesheet_directory() . '/templates/_Partials/header.php' ); ?>
                 <h2>Access</h2>
                 <span>アクセスマップ</span>
             </div>
-            <div class="b-map"></div>
+            <div class="b-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.748322638081!2d127.69197541510376!3d26.23736599515155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e56bc5c964b35f%3A0xf0d3770111e5253!2z44CSOTAwLTAwMDMg5rKW57iE55yM6YKj6KaH5biC5a6J6Kyd77yR5LiB55uu77yS77yS4oiS77yV77yW!5e0!3m2!1sja!2sjp!4v1669282133491!5m2!1sja!2sjp" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
     </main>
 

@@ -110,15 +110,15 @@ textarea {
         left: 0;
         width: 18px;
         height: 18px;
-        border: 1px solid #eee;
-        background: #fff;
+        border: 1px solid $back_color_black_dark;
+        background: $back_color_white;
         content: "";
         border-radius: 50%;
       }
       &:after {
         position: absolute;
-        top: 10px;
-        left: 4px;
+        top: 9px;
+        left: 3px;
         width: 12px;
         height: 12px;
         border-radius: 50%;
@@ -164,8 +164,8 @@ textarea {
       left: 0;
       width: 18px;
       height: 18px;
-      border: 1px solid #eee;
-      background: #fff;
+      border: 1px solid $back_color_black_dark;
+      background: $back_color_white;
       content: "";
       transition: all 0.3s;
     }
@@ -173,8 +173,8 @@ textarea {
       content: '';
       display: block;
       position: absolute;
-      top: 15px;
-      left: 7px;
+      top: 13px;
+      left: 6px;
       width: 9px;
       height: 16px;
       font-size: 14px;

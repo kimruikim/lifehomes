@@ -25,39 +25,25 @@ $post_loop = new WP_Query(
 ?>
 
 <?php if ( $post_loop->have_posts() ) : ?>
-<aside class="widget widget_media">
+<aside>
 <h3>新着記事</h3>
-<ul class="vk_posts">
+<ul>
 	<?php
     $_cnt = 0;
 	while ( $post_loop->have_posts() ) :
 		$post_loop->the_post();
 
-		$options = array(
-			'layout'                     => 'card', // card , card-horizontal , media
-			'display_image'              => false,
-			'display_image_overlay_term' => false,
-			'display_excerpt'            => false,
-			'display_date'               => true,
-			'display_new'                => false,
-			'display_btn'                => false,
-			'image_default_url'          => false,
-			'overlay'                    => false,
-			'btn_text'                   => __( 'Read more', 'lightning' ),
-			'btn_align'                  => 'text-right',
-			'new_text'                   => __( 'New!!', 'lightning' ),
-			'new_date'                   => 7,
-			'class_outer'                => 'vk_post-col-xs-12 vk_post-col-sm-12 vk_post-col-lg-12 vk_post-col-xl-12',
-			'class_title'                => '',
-			'body_prepend'               => '',
-			'body_append'                => '',
-		);
 //		wp_kses_post( VK_Component_Posts::the_view( $post, $options ) );
     $date = date('Y.m.d',  strtotime($post_loop->posts[$_cnt]->post_date));
     $ex_date = explode('.', $date);
     echo '<li>';
     echo '<span class="date-icon">'.$date.'</span>';
-    echo '<a href="'.(empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'].'/'.$ex_date[0].'/'.$ex_date[1].'/'.$ex_date[2].'/'.$post_loop->posts[$_cnt]->post_title.'">'.$post_loop->posts[$_cnt]->post_title.'</a>';
+    if(get_field('url') != '') {
+        echo '<a href="'.get_field('url').'" target="_blank">'.get_the_title().'</a>';
+    } else {
+        echo '<a href="'.(empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'].'/'.$ex_date[0].'/'.$ex_date[1].'/'.$ex_date[2].'/'.$post_loop->posts[$_cnt]->post_title.'">'.$post_loop->posts[$_cnt]->post_title.'</a>';
+
+    }
     echo '</li>';
         $_cnt += 1;
     endwhile;
