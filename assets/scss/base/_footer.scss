@@ -27,6 +27,15 @@
     .flex-list {
       align-items: end;
       margin-bottom: 40px;
+      >div {
+        display: flex;
+        flex-flow: column;
+        a {
+          &:first-child {
+            margin-bottom: 10px;
+          }
+        }
+      }
     }
     >p {
       font-size: 14px;
